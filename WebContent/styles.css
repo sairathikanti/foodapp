@@ -1,0 +1,54 @@
+.topnav{
+    height:85px;
+    background-color:#34495E;
+    margin:0px;
+}
+.topnav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-left:90px;
+    text-decoration: none;
+    float:left;
+    font-size:40px;  
+}
+.login{
+    background-color:#78CA0;
+    float:right;
+    padding:20px 30px 0px 0px;
+}
+.registration{
+   background-color:#78CA0;
+   position:absolute;
+   top:190px;
+   right:220px;
+}
+.body{
+   margin:0px;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+    width:130%;
+}
+input[type=text], input[type=password], input[type=number], input[type=email] {
+   
+    padding: 10px;
+    margin: 0px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    width:130%;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=number], input[type=email]{
+    background-color: #ddd;
+    outline: none;
+}
+#button{
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+

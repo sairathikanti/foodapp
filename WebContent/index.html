@@ -1,129 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.topnav{
-height:85px;
-background-color:#34495E;
-margin:0px;
-}
-.topnav a {
- display: block;
-    color: white;
-    text-align: center;
-    padding-left:90px;
-    text-decoration: none;
-    float:left;
-    font-size:40px;
-   
-}
-
-.login{
-
-background-color:#78CA0;
-float:right;
-padding:20px 30px 0px 0px;
-
-}
-
-.registration{
-
-background-color:#78CA0;
-  position:absolute;
-   top:190px;
-   right:220px;
-
-}
-.body{
-margin:0px;
-
-}
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 15px;
-    width:130%;
-}
-input[type=text], input[type=password], input[type=number] {
-   
-    padding: 10px;
-    margin: 0px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    width:130%;
-}
-
-input[type=text]:focus, input[type=password]:focus, input[type=number] {
-    background-color: #ddd;
-    outline: none;
-}
-#button{
-padding: 10px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-}
-
-
-
-
-</style>
+<!-- css styles -->
+<link rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
-
 <div class="topnav"><a>Feeding Poor From Web</a></div>
-
-
-
 <div style="background-color:#798CA0;height:1000px;">
 <!-- Login -->
 <div class="login">
 <form>
-
-<input  style="width:35%;" type="text" name="username" placeholder="Username" required>
-        <input style="width:35%;" type="password" name="password" placeholder="Password" required>
-        <input id="button" type="submit" value="Login">
- 
-
-
-</form>
-
+    <input  style="width:35%;" type="text" name="email" placeholder="Username" required>
+    <input style="width:35%;" type="password" name="psw" placeholder="Password" required>
+    <input id="button" type="submit" value="Login">
+ </form>
 </div>
 <!-- registration -->
 <div class="registration">
 
-<form  >
+<form action="dashboard.jsp">
   <div>
-    <h2 >Create a new account</h2>
-    <p >It's free and always will be.<br>
+    <h2>Create a new account</h2>
+    <p>It's free and always will be.</p><br>
     <hr>
    
     <label><b>Email</b></label><br>
-    <input  type="text" placeholder="Enter Email" name="email" required><br>
-
+    <input  type="email" placeholder="Enter Email" name="email" required><br>
     <label><b>Password</b></label><br>
     <input type="password" placeholder="Enter Password" name="psw" required><br>
-
     <label><b>Mobile No</b></label><br>
-    <input type="number" placeholder="Repeat Password" name="psw-repeat" required><br>
-    
-    <input type="radio" name="gender" value="Event organiser"> Event organiser
-  <input type="radio" name="gender" value="Trust owner"> Trust owner<br>
-     <button style="margin-top:20px" id="button" type="submit" class="signupbtn">Sign Up</button>
+    <input type="number" placeholder="Repeat Password" name="mobileno" required><br>
+    <input type="radio" name="usertype1" value="Event organiser"> Event organiser
+    <input type="radio" name="usertype2" value="Trust owner"> Trust owner<br>
+    <button style="margin-top:20px" id="button"  type="submit" class="signupbtn">Sign Up</button>
    
   </div>
 </form>
-
-
 </div>
-
-
-
-
 </div>
-
-
 </body>
 </html>
