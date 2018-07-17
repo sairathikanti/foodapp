@@ -31,6 +31,10 @@ hr {
     margin-bottom: 15px;
     width:130%;
 }
+h2,p {
+    margin:0px;
+    padding:0px;
+}
 input[type=text], input[type=password], input[type=number], input[type=email] {
    
     padding: 10px;
@@ -44,7 +48,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=number], input[ty
     background-color: #ddd;
     outline: none;
 }
-#button{
+.button{
     padding: 10px;
     margin: 5px 0 22px 0;
     display: inline-block;

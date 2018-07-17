@@ -1,19 +1,19 @@
-<%@ page import ="java.sql.*" %>
-<%
-    String email = request.getParameter("email");    
-    String psw = request.getParameter("psw");
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/food_tracker",
-            "root", "root");
-    Statement st = con.createStatement();
-    ResultSet rs;
-    rs = st.executeQuery("select * from members where email='" + email + "' and password='" + psw + "'");
-    if (rs.next()) {
-        session.setAttribute("userid",email);
-        //out.println("welcome " + userid);
-        //out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("success.jsp");
-    } else {
-        out.println("Invalid password <a href='index.jsp'>try again</a>");
-    }
-%>
+<%@page import="com.food.Dao.LoginDao"%> 
+<%@ page import="java.sql.ResultSet" %> 
+
+<%@ page import="com.food.beans.LoginUser" %> 
+<jsp:useBean id="obj" class="com.food.beans.LoginUser"/>  
+  
+<jsp:setProperty property="*" name="obj"/> 
+    
+ <%  
+boolean status=LoginDao.login(obj);  
+if(status){  
+	LoginUser u = new LoginUser();
+out.print(status);
+session.setAttribute("userid","true"); 
+response.sendRedirect("success.jsp");
+} else {
+    out.println("Invalid details <a href='index.html'>try again</a>");
+} 
+%> 
