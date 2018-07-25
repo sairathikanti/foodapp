@@ -3,6 +3,7 @@
   
 <jsp:setProperty property="*" name="obj"/> 
     
+   
   <% 
   int i=RegisterDao.register(obj); 
     if (i > 0) {
@@ -14,3 +15,4 @@
         response.sendRedirect("index.jsp");
     }
 %>
+

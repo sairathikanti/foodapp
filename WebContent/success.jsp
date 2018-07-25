@@ -5,7 +5,7 @@ please enter valid data;
 <a href="index.html">Please Login</a>
 <%} else {
 %>
-<%@ include file ="successpage.html" %>
+<%@ include file ="successpage.jsp" %>
 <%   
     }
 %>
