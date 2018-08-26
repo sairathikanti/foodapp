@@ -1,7 +1,16 @@
 package com.food.beans;
 
-public class FoodPostBean {
+public class FoodDisplayBean {
 	private String name,email,mobileno,address;
+
+	
+	public FoodDisplayBean(String name, String email, String mobileno, String address) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.mobileno = mobileno;
+		this.address = address;
+	}
 
 	public String getName() {
 		return name;

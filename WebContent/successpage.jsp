@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%@page import="com.food.Dao.FoodPostDao"%>  
-<jsp:useBean id="obj" class="com.food.beans.FoodPostBean"/>  
 <%@ page import="java.sql.ResultSet" %>
   
 <jsp:setProperty property="*" name="obj"/> 
@@ -249,43 +248,6 @@ function adjust_textarea(h) {
     h.style.height = (h.scrollHeight)+"px";
 }
 </script>
-
-<!-- table  -->
-<div align="center">
-        <table border="1" cellpadding="5">
-            <caption><h2>List of users</h2></caption>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>mobileno</th>
-                <th>address</th>
-            </tr>
-            
-      <%
-try {
-            
-       ResultSet   resultset =FoodPostDao.post(obj);
-     out.print(resultset);
-            while(resultset.next()){ %>
-            <TR>
-                <TD> <%= resultset.getString(1) %></td>
-                <TD> <%= resultset.getString(2) %></TD>
-                <TD> <%= resultset.getString(3) %></TD>
-                <TD> <%= resultset.getString(4) %></TD>
-                <TD> <%= resultset.getString(5) %></TD>
-            </TR>
-           <%}   
-            
-            } catch(Exception e) {
-      }
-%>
-
-
-        </table>
-    </div>
-
-
-
+<%@ include file='FoodDisplay.jsp' %>
 </body>
 </html>
