@@ -10,7 +10,6 @@
   <% 
   int i=FoodPostDao.post(obj); 
     if (i > 0) {
-    	
         //session.setAttribute("userid", user);
         response.sendRedirect("success.jsp");
         

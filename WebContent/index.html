@@ -17,23 +17,20 @@
 </div>
 <!-- registration -->
 <div class="registration">
-
 <form action="dashboard.jsp">
   <div>
     <h2>Create a new account</h2>
     <p>It's free and always will be.</p><br>
     <hr>
-   
     <label><b>Email</b></label><br>
     <input  type="email" placeholder="Enter Email" name="email" required><br>
     <label><b>Password</b></label><br>
     <input type="password" placeholder="Enter Password" name="psw" required><br>
-    <label><b>Mobile No</b></label><br>
-    <input type="number" placeholder="Repeat Password" name="mobileno" required><br>
-    <input type="radio" name="usertype1" value="Event organiser"> Event organiser
-    <input type="radio" name="usertype2" value="Trust owner"> Trust owner<br>
+    <label><b>Confirm Password</b></label><br>
+    <input type="password" placeholder="Confirm Password" name="mobileno" required><br>
+    <input required type="radio" name="userType" value="provider"> Event Organizer
+    <input required type="radio" name="userType" value="seeker"> Trust Owner<br>
     <button style="margin-top:20px" id="button"  type="submit" class="signupbtn">Sign Up</button>
-   
   </div>
 </form>
 </div>

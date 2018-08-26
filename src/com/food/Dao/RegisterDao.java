@@ -19,7 +19,7 @@ public class RegisterDao {
 				            "root", "root");
 				  Statement st = con.createStatement();
 				    //ResultSet rs;
-				     status = st.executeUpdate("insert into USER_TBL(email, password, mobileno) values ('" + u.getEmail() + "','" + u.getPsw() + "','" + u.getMobileno() + "')");
+				     status = st.executeUpdate("insert into USER_TBL(email, password, mobileno, user_type) values ('" + u.getEmail() + "','" + u.getPsw() + "','" + u.getMobileno() + "','" + u.getUserType() + "')");
 		//	status=ps.executeUpdate();  
 			System.out.println(status);
 			}catch(Exception e){}  
