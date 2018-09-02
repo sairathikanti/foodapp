@@ -16,11 +16,11 @@ public class LoginDao {
 		boolean status=false;
 		try{  
 			  Class.forName("com.mysql.jdbc.Driver"); 
-			  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/food_tracker",
+			  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/food_app",
 			            "root", "root");
 			  Statement st = con.createStatement();
 			 
-			   rs = st.executeQuery("select * from USER_TBL where email='" + u.getEmail() + "' and password='" + u.getPsw() + "'");
+			   rs = st.executeQuery("select * from user where email='" + u.getEmail() + "' and password='" + u.getPsw() + "'");
 			 //System.out.println(status);
 			   status=rs.next();
 		}catch(Exception e){}  

@@ -1,15 +1,24 @@
 package com.food.beans;
 
 public class FoodDisplayBean {
-	private String name,email,mobileno,address;
+	private String name,email,mobileno,address,quantity;
 
 	
-	public FoodDisplayBean(String name, String email, String mobileno, String address) {
+	public String getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+
+	public FoodDisplayBean(String name, String email, String mobileno, String address, int quantity) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.mobileno = mobileno;
 		this.address = address;
+		this.quantity = quantity;
 	}
 
 	public String getName() {

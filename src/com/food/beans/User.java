@@ -1,7 +1,15 @@
 package com.food.beans;
 
 public class User {
-	private String email,psw,mobileno,userType;
+	private String email,name,psw,mobileno,userType;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getEmail() {
 		return email;

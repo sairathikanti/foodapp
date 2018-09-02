@@ -17,18 +17,12 @@ public class FoodDisplayDao {
 	 public  List<FoodDisplayBean> display() throws SQLException {
 		List<FoodDisplayBean> data = new ArrayList<>();
 		ResultSet rs = null;
-		String query="select * from FOOD_POSTING";
+		String query="select * from food_posting";
 		try{  
 			  Class.forName("com.mysql.jdbc.Driver"); 
-			  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/food_post",
+			  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/food_app",
 			            "root", "root");
-			  Statement st = con.createStatement();
-			 
-		//	int  status = st.executeUpdate("insert into FOOD_POSTING(name, email, mobileno, address) values ('" + f.getName() + "','" + f.getEmail() + "','" + f.getMobileno() + "','" + f.getAddress() + "')", Statement.RETURN_GENERATED_KEYS);
-				//	status=ps.executeUpdate();   status=rs.next();
-		//	  System.out.print(status);
-			  
-			  
+			  Statement st = con.createStatement();			  
 		   rs = st.executeQuery(query);
 		   System.out.println("result set"+rs);
 			  while (rs.next()) {
@@ -36,7 +30,8 @@ public class FoodDisplayDao {
 		            String email = rs.getString("email");
 		            String mobileno = rs.getString("mobileno");
 		            String address = rs.getString("address");
-		            FoodDisplayBean f = new FoodDisplayBean(name,email,mobileno,address);
+		            int quantity = rs.getInt("quantity");
+		            FoodDisplayBean f = new FoodDisplayBean(name,email,mobileno,address,quantity);
 		            data.add(f);
 		            
 		            System.out.println("data..."+data);
