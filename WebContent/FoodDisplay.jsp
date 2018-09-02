@@ -31,6 +31,7 @@ ResultSet resultSet = null;
 <td><b>Email</b></td>
 <td><b>MobileNo</b></td>
 <td><b>Address</b></td>
+<td<b>Can Feed</b></td>
 
 </tr>
 <%
@@ -48,6 +49,7 @@ while(resultSet.next()){
 <td><%=resultSet.getString("email") %></td>
 <td><%=resultSet.getString("mobileno") %></td>
 <td><%=resultSet.getString("address") %></td>
+<td><%=resultSet.getInt("quantity") %></td>
 
 
 </tr>
